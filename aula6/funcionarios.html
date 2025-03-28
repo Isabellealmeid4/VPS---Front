@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPlast</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <header>
+        <h1>IPlast</h1>
+    </header>
+    <main>
+        <button onclick="cadastro.classList.remove('oculto')">Novo Funcionário</button>
+        <div></div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Logradouro</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela">
+                <tr>
+                    <td>Paivgton</td>
+                    <td>12345678909</td>
+                    <td>paivgton.sesnai@gmail.com</td>
+                    <td>987654321</td>
+                    <td>Sesnai jaguaruna</td>
+                    <td><button>Editar</button><button>Excluir</button></td>
+                </tr>
+            </tbody>
+            
+        </table>
+        
+    </main>
+    
+    <footer>
+        <span>Desenvolvido por Isabelle</span>
+    </footer>
+    <div class="modal oculto" id="cadastro">
+        <div class="janela">
+            <div>
+                    <h2>Cadastre um Funcionário</h2>
+                <button onclick="window.location.reload()">X</button>
+            </div>
+            
+            <form>
+                <input type="text" id="nome" placeholder="Nome" required>
+                <input type="number" id="cpf" placeholder="CPF" required>
+                <input type="text" id="email" placeholder="E-mail" required>
+                <input type="number" id="telefone" placeholder="Telefone" required>
+                <input type="text" id="logradouro" placeholder="Logradouro" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

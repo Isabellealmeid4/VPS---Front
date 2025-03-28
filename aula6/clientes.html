@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPlast</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <header>
+        <h1>IPlast</h1>
+    </header>
+    <main>
+        <button onclick="cadastro.classList.remove('oculto')">Novo Cliente</button>
+
+        <div></div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>E-mail</th>
+                    <th>Logradouro</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela">
+                <tr>
+                    <td>Welligva</td>
+                    <td>78945612308</td>
+                    <td>welligva.naises@gmail.com</td>
+                    <td>naises runajagua</td>
+                    <td><button>Editar</button><button>Excluir</button></td>
+                </tr>
+            </tbody>
+            
+        </table>
+    </main>
+    
+    <footer>
+        <span>Desenvolvido por Isabelle</span>
+    </footer>
+    <div class="modal oculto" id="cadastro">
+        <div class="janela">
+            <h3>Cadastro de Clientes</h3>
+            <button onclick="window.location.reload()">X</button>
+            <form>
+                <input type="text" id="nome" placeholder="Nome" required>
+                <input type="number" id="cpf" placeholder="CPF" required>
+                <input type="text" id="email" placeholder="E-mail" required>
+                <input type="text" id="logradouro" placeholder="Logradouro" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

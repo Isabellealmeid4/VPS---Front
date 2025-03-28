@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPlast</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+    <header>
+        <h1>IPlast</h1>
+    </header>
+    <main>
+        <button onclick="cadastro.classList.remove('oculto')">Novo Produto</button>
+
+        <div></div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Valor de Custo</th>
+                    <th>Valor Final</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela">
+                <tr>
+                    <td>1</td>
+                    <td>Copo descartável</td>
+                    <td>Copo descartável azul</td>
+                    <td>R$ 2,00</td>
+                    <td>R$ 10,00</td>
+                    <td><button onclick="alert('Produto editado')">Editar</button><button onclick="alert('Produto excluido')">Excluir</button></td></td>
+                </tr>
+            </tbody>
+            
+        </table>
+    </main>
+
+    <footer>
+        <span>Desenvolvido por Isabelle </span>
+    </footer>
+    <div id="cadastro" class="modal oculto">
+        <div class="janela">
+            <div>
+                <h2>Cadastre um produto</h2>
+                <button onclick="cadastro.classList.add('oculto')">X</button>
+            </div>
+
+            <form>
+                <input type="text" id="nome" placeholder="Nome" required>
+                <input type="text" id="descricao" placeholder="Descrição" required>
+                <input type="number" step="0.01" id="vacusto" placeholder="Valor de custo" required>
+                <input type="number" step="0.01" id="vafinal" placeholder="Valor de venda" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
